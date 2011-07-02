@@ -1,0 +1,188 @@
+Hosting.exe started
+===================
+
+KayakServer binding to 
+KayakServer: accepting connection
+
+First Request to http://127.0.0.1:8080 completes succesfully
+============================================================
+KayakServer: accepting connection
+--- Posted task.
+KayakServer: accepting connection
+--- Posted task.
+--- Executing Task ---
+KayakServer: accepted connection
+KayakSocket: reading.
+--- Posted task.
+--- Done Executing Task ---
+--- Executing Task ---
+KayakServer: accepted connection
+KayakSocket: reading.
+--- Done Executing Task ---
+--- Executing Task ---
+KayakSocket: receive completed async
+KayakSocket: async read 498
+OnHeadersEnd
+OnMessageEnd
+KayakSocket: added 145 bytes to buffer, buffer size was 0, buffer size is 145
+--- Posted task.
+KayakSocket: added 6 bytes to buffer, buffer size was 145, buffer size is 151
+KayakSocket: added 6 bytes to buffer, buffer size was 151, buffer size is 157
+KayakSocket: added 6 bytes to buffer, buffer size was 157, buffer size is 163
+KayakSocket: added 6 bytes to buffer, buffer size was 163, buffer size is 169
+--- Posted task.
+--- Done Executing Task ---
+--- Executing Task ---
+KayakSocket: Wrote 145 async, buffer size is 24
+KayakSocketState: CanShutdownAndClose (readEnded = False, writeEnded = False, bufferIsEmpty = False)
+--- Done Executing Task ---
+--- Executing Task ---
+KayakSocket: reading.
+--- Done Executing Task ---
+--- Posted task.
+--- Executing Task ---
+KayakSocket: Wrote 24 async, buffer size is 0
+KayakSocketState: CanShutdownAndClose (readEnded = False, writeEnded = False, bufferIsEmpty = True)
+--- Done Executing Task ---
+--- Posted task.
+--- Executing Task ---
+KayakSocket: receive completed async
+KayakSocket: async read 423
+OnHeadersEnd
+OnMessageEnd
+--- Posted task.
+--- Done Executing Task ---
+--- Executing Task ---
+KayakSocket: reading.
+--- Done Executing Task ---
+
+
+Second Request to http://127.0.0.1:8080 completes succesfully
+=============================================================
+
+--- Posted task.
+--- Executing Task ---
+KayakSocket: receive completed async
+KayakSocket: async read 498
+OnHeadersEnd
+OnMessageEnd
+KayakSocket: added 145 bytes to buffer, buffer size was 0, buffer size is 145
+KayakSocket: added 6 bytes to buffer, buffer size was 145, buffer size is 151
+KayakSocket: added 6 bytes to buffer, buffer size was 151, buffer size is 157
+KayakSocket: added 6 bytes to buffer, buffer size was 157, buffer size is 163
+KayakSocket: added 6 bytes to buffer, buffer size was 163, buffer size is 169
+--- Posted task.
+--- Posted task.
+--- Done Executing Task ---
+--- Executing Task ---
+KayakSocket: Wrote 151 async, buffer size is 18
+KayakSocketState: CanShutdownAndClose (readEnded = False, writeEnded = False, bufferIsEmpty = False)
+--- Done Executing Task ---
+--- Executing Task ---
+KayakSocket: reading.
+--- Done Executing Task ---
+--- Posted task.
+--- Executing Task ---
+KayakSocket: Wrote 18 async, buffer size is 0
+KayakSocketState: CanShutdownAndClose (readEnded = False, writeEnded = False, bufferIsEmpty = True)
+--- Done Executing Task ---
+
+
+Third Request to http://127.0.0.1:8080 fails to complete response
+=================================================================
+
+--- Posted task.
+--- Executing Task ---
+KayakSocket: receive completed async
+KayakSocket: async read 498
+OnHeadersEnd
+OnMessageEnd
+--- Posted task.
+--- Done Executing Task ---
+--- Executing Task ---
+KayakSocket: reading.
+--- Done Executing Task ---
+
+
+Browser stop button pressed
+===========================
+
+--- Posted task.
+--- Executing Task ---
+KayakSocket: receive completed async
+KayakSocket: async read 0
+KayakSocket: peer hung up.
+Socket OnEnd.
+--- Posted task.
+--- Done Executing Task ---
+--- Executing Task ---
+--- Done Executing Task ---
+
+
+Fifth Request to http://127.0.0.1:8080 completes succesfully
+============================================================
+
+KayakServer: accepting connection
+--- Posted task.
+--- Executing Task ---
+KayakServer: accepted connection
+KayakSocket: reading.
+--- Done Executing Task ---
+--- Posted task.
+--- Executing Task ---
+KayakSocket: receive completed async
+KayakSocket: async read 498
+OnHeadersEnd
+OnMessageEnd
+KayakSocket: added 145 bytes to buffer, buffer size was 0, buffer size is 145
+KayakSocket: added 6 bytes to buffer, buffer size was 145, buffer size is 151
+KayakSocket: added 6 bytes to buffer, buffer size was 151, buffer size is 157
+KayakSocket: added 6 bytes to buffer, buffer size was 157, buffer size is 163
+KayakSocket: added 6 bytes to buffer, buffer size was 163, buffer size is 169
+--- Posted task.
+--- Done Executing Task ---
+--- Executing Task ---
+KayakSocket: reading.
+--- Done Executing Task ---
+--- Posted task.
+--- Executing Task ---
+KayakSocket: Wrote 151 async, buffer size is 18
+KayakSocketState: CanShutdownAndClose (readEnded = False, writeEnded = False, bufferIsEmpty = False)
+--- Done Executing Task ---
+--- Posted task.
+--- Executing Task ---
+KayakSocket: Wrote 18 async, buffer size is 0
+KayakSocketState: CanShutdownAndClose (readEnded = False, writeEnded = False, bufferIsEmpty = True)
+--- Done Executing Task ---
+
+
+Sixth Request to http://127.0.0.1:8080 fails to complete response
+=================================================================
+
+--- Posted task.
+--- Executing Task ---
+KayakSocket: receive completed async
+KayakSocket: async read 498
+OnHeadersEnd
+OnMessageEnd
+--- Posted task.
+--- Done Executing Task ---
+--- Executing Task ---
+KayakSocket: reading.
+--- Done Executing Task ---
+
+
+Browser stop button pressed
+===========================
+
+--- Posted task.
+--- Executing Task ---
+KayakSocket: receive completed async
+KayakSocket: async read 0
+KayakSocket: peer hung up.
+Socket OnEnd.
+--- Posted task.
+--- Done Executing Task ---
+--- Executing Task ---
+--- Done Executing Task ---
+
