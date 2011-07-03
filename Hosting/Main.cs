@@ -14,7 +14,7 @@ namespace Hosting
 			Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
 			Debug.AutoFlush = true;
 #endif
-			var scheduler = new KayakScheduler(new SchedulerDelegate());
+			using (var scheduler = new KayakScheduler(new SchedulerDelegate()))
 			using (var server = KayakServer.Factory.CreateGate("Hosting.Startup.Configuration", scheduler))
 			using (server.Listen(new IPEndPoint(IPAddress.Any, 8080)))
 			{
