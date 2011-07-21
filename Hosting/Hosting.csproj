@@ -54,7 +54,8 @@
     <Compile Include="Main.cs" />
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="SchedulerDelegate.cs" />
+    <Compile Include="DefaultKayakDelegate.cs" />
+    <Compile Include="IKayakDelegate.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

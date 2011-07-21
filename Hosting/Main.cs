@@ -3,6 +3,8 @@ using System.Diagnostics;
 using System.Net;
 using Gate.Kayak;
 using Kayak;
+using System.Collections.Generic;
+using Gate;
 
 namespace Hosting
 {
@@ -10,16 +12,28 @@ namespace Hosting
 	{
 		public static void Main(string[] args)
 		{
-#if DEBUG
-			Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
-			Debug.AutoFlush = true;
-#endif
-			using (var scheduler = new KayakScheduler(new SchedulerDelegate()))
-			using (var server = KayakServer.Factory.CreateGate(Startup.application, scheduler, null))
-			using (server.Listen(new IPEndPoint(IPAddress.Any, 8088)))
+			var kayakDelegate = new DefaultKayakDelegate();
+			var scheduler = KayakScheduler.Factory.Create(kayakDelegate);
+			var remainingArguments = new string[]{};
+			scheduler.Post(() => kayakDelegate.OnStart(scheduler, remainingArguments));
+			
+			var listenEndPoint = new IPEndPoint(IPAddress.Any, 8080);
+			var context = new Dictionary<string, object>()
+					{
+					    { "kayak.ListenEndPoint", listenEndPoint },
+					    { "kayak.Arguments", remainingArguments }
+					};
+
+			var server = KayakServer.Factory.CreateGate(Startup.application, scheduler, context);
+			
+			scheduler.Post(() =>
 			{
-				scheduler.Start();
-			}
+			    Console.WriteLine("kayak: binding gate app to '" + listenEndPoint + "'");
+			    server.Listen(listenEndPoint);
+			});
+			
+			// blocks until Stop is called 
+			scheduler.Start();
 		}
 	}
 }
